@@ -1,0 +1,840 @@
+./run_docking_single.sh 2AJF 
+./run_docking_single.sh 2VIS 
+./run_docking_single.sh 1NCA 
+./run_docking_single.sh 1Y64 
+./run_docking_single.sh 3CPH 
+./run_docking_single.sh 1JMO 
+./run_docking_single.sh 1AHW 
+./run_docking_single.sh 1OPH 
+./run_docking_single.sh 1H1V 
+./run_docking_single.sh 1AKJ 
+./run_docking_single.sh 2A5T 
+./run_docking_single.sh 1GLA 
+./run_docking_single.sh 1E6E 
+./run_docking_single.sh 1BJ1 
+./run_docking_single.sh 2MTA 
+./run_docking_single.sh 2H7V 
+./run_docking_single.sh 1EZU 
+./run_docking_single.sh 1IB1 
+./run_docking_single.sh 1NSN 
+./run_rescore_single.sh 1lou 
+./run_docking_single.sh 1DFJ 
+./run_mintest_single.sh 3f2z 
+./run_docking_single.sh 1F51 
+./run_rescore_single.sh 3b79 
+./run_rescore_single.sh 1sau 
+./run_docking_single.sh 1KKL 
+./run_docking_single.sh 1M10 
+./run_mintest_single.sh 1z2u 
+./run_mintest_single.sh 2i6c 
+./run_docking_single.sh 1FSK 
+./run_rescore_single.sh 3ey6 
+./run_docking_single.sh 1US7 
+./run_mintest_single.sh 1t3y 
+./run_mintest_single.sh 2jek 
+./run_rescore_single.sh 1cei 
+./run_mintest_single.sh 3b79 
+./run_rescore_single.sh 1acf 
+./run_docking_single.sh 1FQ1 
+./run_mintest_single.sh 1elw 
+./run_mintest_single.sh 3co1 
+./run_docking_single.sh 1F34 
+./run_rescore_single.sh 1fna 
+./run_mintest_single.sh 1o8x 
+./run_rescore_single.sh 1tul 
+./run_rescore_single.sh 1ew4 
+./run_docking_single.sh 1JZD 
+./run_rescore_single.sh 2h28 
+./run_rescore_single.sh 1prq 
+./run_mintest_single.sh 3gbw 
+./run_docking_single.sh 1FQJ 
+./run_rescore_single.sh 3cx2 
+./run_rescore_single.sh 3fk8 
+./run_mintest_single.sh 1bkr 
+./run_docking_single.sh 1GPW 
+./run_rescore_single.sh 1bkr 
+./run_rescore_single.sh 2vq4 
+./run_mintest_single.sh 3q6l 
+./run_rescore_single.sh 2i6c 
+./run_rescore_single.sh 1poh 
+./run_mintest_single.sh 1zma 
+./run_docking_single.sh 2JEL 
+./run_rescore_single.sh 2i4a 
+./run_rescore_single.sh 1t2i 
+./run_rescore_single.sh 2ppp 
+./run_rescore_single.sh 1z2u 
+./run_mintest_single.sh 3fk8 
+./run_docking_single.sh 2I9B 
+./run_docking_single.sh 2PCC 
+./run_rescore_single.sh 2v1m 
+./run_rescore_single.sh 1bm8 
+./run_rescore_single.sh 1opd 
+./run_rescore_single.sh 1nps 
+./run_mintest_single.sh 1acf 
+./run_mintest_single.sh 3klr 
+./run_mintest_single.sh 3ey6 
+./run_rescore_single.sh 3dke 
+./run_mintest_single.sh 1prq 
+./run_docking_single.sh 9QFW 
+./run_rescore_single.sh 1iib 
+./run_mintest_single.sh 2oss 
+./run_rescore_single.sh 3nbm 
+./run_docking_single.sh 1IJK 
+./run_mintest_single.sh 2chf 
+./run_rescore_single.sh 2he4 
+./run_rescore_single.sh 1elw 
+./run_rescore_single.sh 1zma 
+./run_rescore_single.sh 1x6x 
+./run_mintest_single.sh 2wwe 
+./run_rescore_single.sh 3co1 
+./run_rescore_single.sh 1vcc 
+./run_mintest_single.sh 1sau 
+./run_mintest_single.sh 1x6x 
+./run_mintest_single.sh 1ew4 
+./run_mintest_single.sh 1kf5 
+./run_mintest_single.sh 2ppp 
+./run_docking_single.sh 2AYO 
+./run_mintest_single.sh 1sen 
+./run_rescore_single.sh 2acy 
+./run_rescore_single.sh 1wdv 
+./run_rescore_single.sh 1o8x 
+./run_rescore_single.sh 3gbw 
+./run_rescore_single.sh 3f2z 
+./run_rescore_single.sh 1vkk 
+./run_rescore_single.sh 1ttz 
+./run_rescore_single.sh 2jek 
+./run_mintest_single.sh 1jbe 
+./run_rescore_single.sh 1ubi 
+./run_rescore_single.sh 2oss 
+./run_rescore_single.sh 2nqw 
+./run_mintest_single.sh 2iay 
+./run_mintest_single.sh 3nbm 
+./run_docking_single.sh 2O3B 
+./run_rescore_single.sh 1t3y 
+./run_mintest_single.sh 2acy 
+./run_mintest_single.sh 1bm8 
+./run_rescore_single.sh 1jbe 
+./run_mintest_single.sh 2h28 
+./run_rescore_single.sh 3klr 
+./run_mintest_single.sh 1lou 
+./run_mintest_single.sh 2i4a 
+./run_rescore_single.sh 1cc8 
+./run_rescore_single.sh 2ra9 
+./run_mintest_single.sh 1poh 
+./run_docking_single.sh 1XU1 
+./run_docking_single.sh 1F6M 
+./run_ssm_single.sh 1wou 
+./run_ssm_single.sh 4qxl 
+./run_docking_single.sh 1K74 
+./run_mintest_single.sh 1opd 
+./run_rescore_single.sh 2r2z 
+./run_docking_single.sh 1A2K 
+./run_rescore_single.sh 2chf 
+./run_rescore_single.sh 1sen 
+./run_docking_single.sh 1AVX 
+./run_mintest_single.sh 1t2i 
+./run_mintest_single.sh 2ra9 
+./run_rescore_single.sh 2iay 
+./run_ssm_single.sh 3dj9 
+./run_rescore_single.sh 3q6l 
+./run_mintest_single.sh 1tul 
+./run_rescore_single.sh 1r69 
+./run_mintest_single.sh 2he4 
+./run_mintest_single.sh 2vq4 
+./run_mintest_single.sh 1fna 
+./run_mintest_single.sh 1nps 
+./run_rescore_single.sh 1mjc 
+./run_mintest_single.sh 2nqw 
+./run_rescore_single.sh 1kf5 
+./run_docking_single.sh 2ABZ 
+./run_ssm_single.sh 2ppo 
+./run_ssm_single.sh 1ew4 
+./run_rescore_single.sh 1a32 
+./run_docking_single.sh 1YVB 
+./run_rescore_single.sh 2wwe 
+./run_mintest_single.sh 3cx2 
+./run_mintest_single.sh 1cei 
+./run_mintest_single.sh 1vcc 
+./run_ssm_single.sh 1qau 
+./run_ssm_single.sh 1aaj 
+./run_mintest_single.sh 1cc8 
+./run_rescore_single.sh 1hz6 
+./run_rescore_single.sh 1bk2 
+./run_docking_single.sh 1BUH 
+./run_rescore_single.sh 1ctf 
+./run_ssm_single.sh 2ptv 
+./run_rescore_single.sh 2nr7 
+./run_docking_single.sh 2O8V 
+./run_docking_single.sh 1BVK 
+./run_docking_single.sh 3D5S 
+./run_ssm_single.sh 2vh7 
+./run_docking_single.sh 1RV6 
+./run_mintest_single.sh 1ubi 
+./run_ssm_single.sh 1sbx 
+./run_mintest_single.sh 1a32 
+./run_rescore_single.sh 3ich 
+./run_ssm_single.sh 1w41 
+./run_ssm_single.sh 1fus 
+./run_mintest_single.sh 1ttz 
+./run_ssm_single.sh 1noa 
+./run_ssm_single.sh 1ln4 
+./run_mintest_single.sh 2r2z 
+./run_rescore_single.sh 1enh 
+./run_docking_single.sh 1EWY 
+./run_ssm_single.sh 3rjp 
+./run_ssm_single.sh 3ag7 
+./run_docking_single.sh 1ZHI 
+./run_rescore_single.sh 1pgx 
+./run_mintest_single.sh 1r69 
+./run_docking_single.sh 2CFH 
+./run_ssm_single.sh 1dsl 
+./run_mintest_single.sh 1enh 
+./run_mintest_single.sh 1mjc 
+./run_rescore_single.sh 3hyn 
+./run_ssm_single.sh 2pko 
+./run_ssm_single.sh 2pcy 
+./run_ssm_single.sh 1jos 
+./run_ssm_single.sh 2rb8 
+./run_ssm_single.sh 3mx7 
+./run_ssm_single.sh 1j27 
+./run_ssm_single.sh 2bk8 
+./run_ssm_single.sh 2cwr 
+./run_docking_single.sh 1HCF 
+./run_rescore_single.sh 2dfb 
+./run_rescore_single.sh 3hp4 
+./run_rescore_single.sh 2fi1 
+./run_mintest_single.sh 1iib 
+./run_xtalgrads_single.sh 4lzt 
+./run_rescore_single.sh 2oml 
+./run_ssm_single.sh 2ygs 
+./run_ssm_single.sh 1s29 
+./run_ssm_single.sh 3e0e 
+./run_ssm_single.sh 1lpl 
+./run_mintest_single.sh 1ctf 
+./run_docking_single.sh 1EAW 
+./run_mintest_single.sh 1hz6 
+./run_ssm_single.sh 1mwp 
+./run_mintest_single.sh 1bk2 
+./run_rescore_single.sh 3d4e 
+./run_ssm_single.sh 1vjk 
+./run_xtalgrads_single.sh 2fwh 
+./run_docking_single.sh 2HRK 
+./run_xtalgrads_single.sh 2nt4 
+./run_xtalgrads_single.sh 1t3y 
+./run_xtalgrads_single.sh 1kng 
+./run_xtalgrads_single.sh 1b9o 
+./run_xtalgrads_single.sh 2wwe 
+./run_ssm_single.sh 2fq3 
+./run_ssm_single.sh 1ptf 
+./run_xtalgrads_single.sh 1sen 
+./run_ssm_single.sh 3fdr 
+./run_mintest_single.sh 1pgx 
+./run_ssm_single.sh 1ulr 
+./run_ssm_single.sh 3ce7 
+./run_xtalgrads_single.sh 2ppp 
+./run_xtalgrads_single.sh 1o8s 
+./run_ssm_single.sh 2ywk 
+./run_xtalgrads_single.sh 1jbe 
+./run_docking_single.sh 1Z5Y 
+./run_ssm_single.sh 2i6v 
+./run_xtalgrads_single.sh 3b79 
+./run_docking_single.sh 2UUY 
+./run_ssm_single.sh 2v75 
+./run_ssm_single.sh 2ict 
+./run_ssm_single.sh 1zeq 
+./run_ssm_single.sh 2e3h 
+./run_xtalgrads_single.sh 1zzk 
+./run_docking_single.sh 1R6Q 
+./run_xtalgrads_single.sh 3fk8 
+./run_ssm_single.sh 1zpw 
+./run_xtalgrads_single.sh 2qsk 
+./run_xtalgrads_single.sh 2i24 
+./run_ssm_single.sh 1t07 
+./run_docking_single.sh 7CEI 
+./run_xtalgrads_single.sh 1kf5 
+./run_xtalgrads_single.sh 2ra9 
+./run_xtalgrads_single.sh 2oss 
+./run_xtalgrads_single.sh 1d4t 
+./run_xtalgrads_single.sh 2fma 
+./run_xtalgrads_single.sh 3ey6 
+./run_docking_single.sh 1FC2 
+./run_docking_single.sh 1J2J 
+./run_xtalgrads_single.sh 1zuu 
+./run_xtalgrads_single.sh 1zma 
+./run_xtalgrads_single.sh 2jek 
+./run_xtalgrads_single.sh 2iay 
+./run_xtalgrads_single.sh 2g6f 
+./run_xtalgrads_single.sh 2frg 
+./run_xtalgrads_single.sh 3nbm 
+./run_xtalgrads_single.sh 2vq4 
+./run_ssm_single.sh 1ehd 
+./run_xtalgrads_single.sh 2gzv 
+./run_ssm_single.sh 3k3v 
+./run_ssm_single.sh 2qff 
+./run_xtalgrads_single.sh 1aho 
+./run_xtalgrads_single.sh 1l9l 
+./run_xtalgrads_single.sh 2fe5 
+./run_xtalgrads_single.sh 1f94 
+./run_docking_single.sh 1QA9 
+./run_xtalgrads_single.sh 2o9u 
+./run_docking_single.sh 1FFW 
+./run_xtalgrads_single.sh 1xmt 
+./run_ssm_single.sh 1msi 
+./run_ssm_single.sh 3ngp 
+./run_xtalgrads_single.sh 1i2t 
+./run_xtalgrads_single.sh 1tg0 
+./run_docking_single.sh 1SYX 
+./run_ssm_single.sh 1hyp 
+./run_xtalgrads_single.sh 2nqw 
+./run_xtalgrads_single.sh 1vbw 
+./run_xtalgrads_single.sh 1kth 
+./run_xtalgrads_single.sh 1gmx 
+./run_relax.sh 1r2m 
+./run_xtalgrads_single.sh 1nkd 
+./run_relax.sh 4lzt 
+./run_xtalgrads_single.sh 1bq8 
+./run_relax.sh 1zlb 
+./run_relax.sh 1mc2 
+./run_core_single.sh 1h4g 5 
+./run_relax.sh 2vq4 
+./run_relax.sh 2jek 
+./run_relax.sh 1z2u 
+./run_relax.sh 1jf8 
+./run_core_single.sh 2hyv 31 
+./run_relax.sh 1t3y 
+./run_core_single.sh 1e0w 50 
+./run_relax.sh 1kf5 
+./run_relax.sh 2oss 
+./run_relax.sh 3fk8 
+./run_relax.sh 2nt4 
+./run_docking_single.sh 2OOB 
+./run_core_single.sh 1wzz 2 
+./run_xtalgrads_single.sh 2gkr 
+./run_relax.sh 1zma 
+./run_relax.sh 1jbe 
+./run_relax.sh 3b79 
+./run_relax.sh 2fwh 
+./run_relax.sh 1kng 
+./run_relax.sh 2zib 
+./run_core_single.sh 1suu 11 
+./run_core_single.sh 3hh8 32 
+./run_relax.sh 1cxq 
+./run_relax.sh 1o8x 
+./run_core_single.sh 3gir 9 
+./run_xtalgrads_single.sh 1npi 
+./run_core_single.sh 3g63 6 
+./run_relax.sh 1gmx 
+./run_core_single.sh 3c1o 46 
+./run_core_single.sh 2rhi 4 
+./run_core_single.sh 2wbp 38 
+./run_core_single.sh 1q11 51 
+./run_core_single.sh 3bld 20 
+./run_core_single.sh 3owa 3 
+./run_core_single.sh 2foz 17 
+./run_core_single.sh 1nq6 80 
+./run_relax.sh 1b9o 
+./run_core_single.sh 3dkc 54 
+./run_core_single.sh 2w39 22 
+./run_relax.sh 2i4a 
+./run_core_single.sh 3h7r 7 
+./run_core_single.sh 3e58 36 
+./run_relax.sh 3q6l 
+./run_core_single.sh 2jc4 128 
+./run_core_single.sh 1k5c 33 
+./run_core_single.sh 2fpq 39 
+./run_relax.sh 1d4t 
+./run_core_single.sh 2pfz 53 
+./run_relax.sh 1o8s 
+./run_core_single.sh 2dt8 105 
+./run_core_single.sh 1nzj 85 
+./run_core_single.sh 1u0k 67 
+./run_core_single.sh 1wma 42 
+./run_core_single.sh 3aal 15 
+./run_core_single.sh 3o72 16 
+./run_core_single.sh 3lxp 101 
+./run_core_single.sh 2c43 63 
+./run_core_single.sh 1vdw 8 
+./run_core_single.sh 1xru 76 
+./run_interface_single.sh 3KTA 18 
+./run_core_single.sh 2oc3 93 
+./run_core_single.sh 3hxl 89 
+./run_core_single.sh 3iu0 35 
+./run_relax.sh 3nbm 
+./run_core_single.sh 3ee4 86 
+./run_core_single.sh 1a8s 37 
+./run_relax.sh 2ra9 
+./run_core_single.sh 2pmb 41 
+./run_core_single.sh 3fw3 13 
+./run_core_single.sh 2egv 10 
+./run_relax.sh 2i24 
+./run_core_single.sh 3afm 24 
+./run_core_single.sh 2bz6 34 
+./run_core_single.sh 2de6 129 
+./run_core_single.sh 2avd 84 
+./run_core_single.sh 1qq7 60 
+./run_core_single.sh 2zu2 14 
+./run_core_single.sh 2pnw 18 
+./run_core_single.sh 2wpv 153 
+./run_core_single.sh 2vuw 92 
+./run_relax.sh 1u2h 
+./run_core_single.sh 3c70 75 
+./run_core_single.sh 2jam 25 
+./run_core_single.sh 1j5x 58 
+./run_core_single.sh 1ysl 27 
+./run_relax.sh 1ufy 
+./run_core_single.sh 2p17 147 
+./run_core_single.sh 3lez 144 
+./run_relax.sh 1c7k 
+./run_core_single.sh 2ex4 59 
+./run_core_single.sh 1y8a 40 
+./run_core_single.sh 1yoe 81 
+./run_core_single.sh 2uzj 49 
+./run_core_single.sh 2b49 29 
+./run_core_single.sh 2oxc 45 
+./run_core_single.sh 2qmq 71 
+./run_core_single.sh 3ot9 149 
+./run_core_single.sh 2bzl 90 
+./run_core_single.sh 2oze 64 
+./run_core_single.sh 2o7r 47 
+./run_core_single.sh 1ty0 26 
+./run_core_single.sh 2zyh 12 
+./run_core_single.sh 3jsl 55 
+./run_core_single.sh 1x1o 23 
+./run_core_single.sh 3i48 160 
+./run_core_single.sh 1t6c 94 
+./run_core_single.sh 3njd 19 
+./run_core_single.sh 3l5e 107 
+./run_core_single.sh 2plr 119 
+./run_core_single.sh 2ibn 30 
+./run_core_single.sh 3b8i 82 
+./run_core_single.sh 2v25 73 
+./run_relax.sh 1sau 
+./run_relax.sh 2nsz 
+./run_relax.sh 2frg 
+./run_core_single.sh 1j8u 61 
+./run_core_single.sh 1g60 69 
+./run_core_single.sh 2arr 78 
+./run_core_single.sh 2ffc 118 
+./run_core_single.sh 3p1a 154 
+./run_core_single.sh 1tc5 56 
+./run_core_single.sh 1s2o 159 
+./run_core_single.sh 2v05 116 
+./run_relax.sh 2fj8 
+./run_relax.sh 2iay 
+./run_core_single.sh 1iyb 97 
+./run_core_single.sh 3o66 115 
+./run_core_single.sh 3dgt 114 
+./run_core_single.sh 3kij 120 
+./run_core_single.sh 2zfn 65 
+./run_core_single.sh 3keo 104 
+./run_core_single.sh 2v9m 66 
+./run_core_single.sh 1zdy 57 
+./run_core_single.sh 3ndo 52 
+./run_core_single.sh 2czl 126 
+./run_relax.sh 1zzk 
+./run_core_single.sh 3owv 136 
+./run_core_single.sh 1w3w 124 
+./run_relax.sh 1w0n 
+./run_core_single.sh 3d43 125 
+./run_core_single.sh 3lxz 21 
+./run_core_single.sh 2x4l 102 
+./run_core_single.sh 2j7q 72 
+./run_core_single.sh 1dxj 112 
+./run_core_single.sh 2zhj 131 
+./run_core_single.sh 1k77 133 
+./run_core_single.sh 3gd6 109 
+./run_core_single.sh 3gvo 106 
+./run_core_single.sh 1qwy 122 
+./run_relax.sh 2gzv 
+./run_interface_single.sh 4KT3 27 
+./run_core_single.sh 3bwx 138 
+./run_relax.sh 1sen 
+./run_core_single.sh 3gzh 43 
+./run_interface_single.sh 1GO3 40 
+./run_core_single.sh 2qy9 142 
+./run_core_single.sh 1umz 83 
+./run_core_single.sh 1n93 155 
+./run_core_single.sh 3kgd 1 
+./run_relax.sh 1t2i 
+./run_core_single.sh 1n2x 74 
+./run_relax.sh 2o9u 
+./run_core_single.sh 2e1z 127 
+./run_core_single.sh 1r45 68 
+./run_core_single.sh 1k07 44 
+./run_core_single.sh 3cl5 103 
+./run_core_single.sh 2i7d 77 
+./run_relax.sh 2wwe 
+./run_core_single.sh 2wkx 158 
+./run_interface_single.sh 3LXR 11 
+./run_core_single.sh 2dy0 98 
+./run_core_single.sh 3c5a 117 
+./run_core_single.sh 2i7g 70 
+./run_core_single.sh 1zwx 146 
+./run_relax.sh 1euw 
+./run_interface_single.sh 1PXV 30 
+./run_core_single.sh 3om0 28 
+./run_core_single.sh 3fuc 62 
+./run_core_single.sh 2z1n 96 
+./run_core_single.sh 3o8q 87 
+./run_core_single.sh 2qed 143 
+./run_core_single.sh 2xbk 167 
+./run_relax.sh 1xt5 
+./run_core_single.sh 1q74 95 
+./run_relax.sh 2fe5 
+./run_stability_test.sh 1
+./run_stability_test.sh 2
+./run_stability_test.sh 3
+./run_stability_test.sh 4
+./run_stability_test.sh 5
+./run_stability_test.sh 6
+./run_stability_test.sh 7
+./run_stability_test.sh 8
+./run_stability_test.sh 9
+./run_stability_test.sh 10
+./run_stability_test.sh 11
+./run_stability_test.sh 12
+./run_stability_test.sh 13
+./run_stability_test.sh 14
+./run_stability_test.sh 15
+./run_stability_test.sh 16
+./run_stability_test.sh 17
+./run_stability_test.sh 18
+./run_stability_test.sh 19
+./run_stability_test.sh 20
+./run_stability_test.sh 21
+./run_stability_test.sh 22
+./run_stability_test.sh 23
+./run_stability_test.sh 24
+./run_stability_test.sh 25
+./run_stability_test.sh 26
+./run_stability_test.sh 27
+./run_stability_test.sh 28
+./run_stability_test.sh 29
+./run_stability_test.sh 30
+./run_stability_test.sh 31
+./run_stability_test.sh 32
+./run_stability_test.sh 33
+./run_stability_test.sh 34
+./run_stability_test.sh 35
+./run_stability_test.sh 36
+./run_stability_test.sh 37
+./run_stability_test.sh 38
+./run_stability_test.sh 39
+./run_stability_test.sh 40
+./run_stability_test.sh 41
+./run_stability_test.sh 42
+./run_stability_test.sh 43
+./run_stability_test.sh 44
+./run_stability_test.sh 45
+./run_stability_test.sh 46
+./run_stability_test.sh 47
+./run_stability_test.sh 48
+./run_stability_test.sh 49
+./run_stability_test.sh 50
+./run_stability_test.sh 51
+./run_stability_test.sh 52
+./run_stability_test.sh 53
+./run_stability_test.sh 54
+./run_stability_test.sh 55
+./run_stability_test.sh 56
+./run_stability_test.sh 57
+./run_stability_test.sh 58
+./run_stability_test.sh 59
+./run_stability_test.sh 60
+./run_stability_test.sh 61
+./run_stability_test.sh 62
+./run_stability_test.sh 63
+./run_stability_test.sh 64
+./run_stability_test.sh 65
+./run_stability_test.sh 66
+./run_stability_test.sh 67
+./run_stability_test.sh 68
+./run_stability_test.sh 69
+./run_stability_test.sh 70
+./run_stability_test.sh 71
+./run_stability_test.sh 72
+./run_stability_test.sh 73
+./run_stability_test.sh 74
+./run_stability_test.sh 75
+./run_stability_test.sh 76
+./run_stability_test.sh 77
+./run_stability_test.sh 78
+./run_stability_test.sh 79
+./run_stability_test.sh 80
+./run_stability_test.sh 81
+./run_stability_test.sh 82
+./run_stability_test.sh 83
+./run_stability_test.sh 84
+./run_stability_test.sh 85
+./run_stability_test.sh 86
+./run_stability_test.sh 87
+./run_stability_test.sh 88
+./run_stability_test.sh 89
+./run_stability_test.sh 90
+./run_stability_test.sh 91
+./run_stability_test.sh 92
+./run_stability_test.sh 93
+./run_stability_test.sh 94
+./run_stability_test.sh 95
+./run_stability_test.sh 96
+./run_stability_test.sh 97
+./run_stability_test.sh 98
+./run_stability_test.sh 99
+./run_stability_test.sh 100
+./run_stability_test.sh 101
+./run_stability_test.sh 102
+./run_stability_test.sh 103
+./run_stability_test.sh 104
+./run_stability_test.sh 105
+./run_stability_test.sh 106
+./run_stability_test.sh 107
+./run_stability_test.sh 108
+./run_stability_test.sh 109
+./run_stability_test.sh 110
+./run_stability_test.sh 111
+./run_stability_test.sh 112
+./run_stability_test.sh 113
+./run_stability_test.sh 114
+./run_stability_test.sh 115
+./run_stability_test.sh 116
+./run_stability_test.sh 117
+./run_stability_test.sh 118
+./run_stability_test.sh 119
+./run_stability_test.sh 120
+./run_stability_test.sh 121
+./run_stability_test.sh 122
+./run_stability_test.sh 123
+./run_stability_test.sh 124
+./run_stability_test.sh 125
+./run_stability_test.sh 126
+./run_stability_test.sh 127
+./run_stability_test.sh 128
+./run_interface_single.sh 2WBW 26 
+./run_core_single.sh 3hss 123 
+./run_core_single.sh 3noo 99 
+./run_core_single.sh 1ups 88 
+./run_core_single.sh 3jva 148 
+./run_core_single.sh 2eb4 48 
+./run_core_single.sh 3h81 91 
+./run_core_single.sh 2ocg 145 
+./run_core_single.sh 2omk 121 
+./run_relax.sh 3ey6 
+./run_interface_single.sh 2V9T 25 
+./run_core_single.sh 3gg9 137 
+./run_interface_single.sh 1JAT 42 
+./run_core_single.sh 3ge6 79 
+./run_interface_single.sh 1R0R 23 
+./run_interface_single.sh 3PRO 14 
+./run_core_single.sh 1pl2 156 
+./run_core_single.sh 3g7d 110 
+./run_interface_single.sh 4NBX 46 
+./run_interface_single.sh 3WHT 43 
+./run_core_single.sh 1usf 132 
+./run_interface_single.sh 3SHG 38 
+./run_core_single.sh 3ke4 139 
+./run_interface_single.sh 1T0P 54 
+./run_relax.sh 1x6x 
+./run_interface_single.sh 3AWU 3 
+./run_interface_single.sh 3FPN 69 
+./run_core_single.sh 3mmy 111 
+./run_core_single.sh 3eyg 162 
+./run_interface_single.sh 4FBJ 17 
+./run_core_single.sh 1rwr 161 
+./run_core_single.sh 3nzz 113 
+./run_interface_single.sh 2Z7F 52 
+./run_core_single.sh 2vve 151 
+./run_interface_single.sh 2UYZ 60 
+./run_core_single.sh 2xwt 166 
+./run_interface_single.sh 3KSE 16 
+./run_interface_single.sh 2ZA4 74 
+./run_interface_single.sh 1PQ1 80 
+./run_core_single.sh 2f5t 157 
+./run_core_single.sh 3o4v 140 
+./run_core_single.sh 2e3p 135 
+./run_interface_single.sh 2FHZ 73 
+./run_core_single.sh 3evk 134 
+./run_relax.sh 1lu4 
+./run_interface_single.sh 2WY3 21 
+./run_interface_single.sh 3H8K 83 
+./run_core_single.sh 1wzo 108 
+./run_interface_single.sh 1R8S 9 
+./run_core_single.sh 2eky 152 
+./run_core_single.sh 1ow3 163 
+./run_relax.sh 2pvb 
+./run_interface_single.sh 3MXN 45 
+./run_relax.sh 2ppp 
+./run_relax.sh 1bkr 
+./run_core_single.sh 1h2b 100 
+./run_interface_single.sh 4JZZ 12 
+./run_core_single.sh 2ywl 150 
+./run_interface_single.sh 2WY8 6 
+./run_core_single.sh 2orw 164 
+./run_core_single.sh 1vhq 165 
+./run_core_single.sh 1toa 130 
+./run_relax.sh 3klr 
+./run_interface_single.sh 3GMO 1 
+./run_interface_single.sh 4K5A 24 
+./run_interface_single.sh 3D3B 63 
+./run_interface_single.sh 2R25 32 
+./run_interface_single.sh 1RDQ 4 
+./run_interface_single.sh 1P57 5 
+./run_interface_single.sh 3WN7 15 
+./run_interface_single.sh 1DPJ 7 
+./run_core_single.sh 3o0k 141 
+./run_relax.sh 1r6j 
+./run_interface_single.sh 3H7H 66 
+./run_relax.sh 1npi 
+./run_interface_single.sh 3KF6 53 
+./run_interface_single.sh 2ZFD 34 
+./run_relax.sh 2qsk 
+./run_interface_single.sh 1NRJ 20 
+./run_interface_single.sh 3EGV 19 
+./run_relax.sh 1l9l 
+./run_interface_single.sh 2VU8 49 
+./run_relax.sh 1xmt 
+./run_interface_single.sh 3KYJ 57 
+./run_interface_single.sh 3P8B 72 
+./run_interface_single.sh 3G9A 13 
+./run_interface_single.sh 4AG1 28 
+./run_interface_single.sh 3GJ3 62 
+./run_interface_single.sh 3K9O 37 
+./run_interface_single.sh 2NNU 67 
+./run_interface_single.sh 2D7C 71 
+./run_interface_single.sh 2F91 41 
+./run_interface_single.sh 1LQV 70 
+./run_interface_single.sh 3N1F 39 
+./run_interface_single.sh 4HI8 56 
+./run_interface_single.sh 3L51 29 
+./run_interface_single.sh 4EQA 36 
+./run_interface_single.sh 2AQ2 8 
+./run_interface_single.sh 1MCV 44 
+./run_interface_single.sh 3P95 31 
+./run_interface_single.sh 1Z3E 76 
+./run_interface_single.sh 3F1N 50 
+./run_interface_single.sh 2Y5F 22 
+./run_interface_single.sh 3BC1 61 
+./run_interface_single.sh 4DH2 48 
+./run_interface_single.sh 1L6X 58 
+./run_relax.sh 1ok0 
+./run_relax.sh 1tg0 
+./run_relax.sh 2nqw 
+./run_interface_single.sh 4A94 2 
+./run_interface_single.sh 2VN6 82 
+./run_interface_single.sh 2NL9 88 
+./run_interface_single.sh 3C9A 51 
+./run_interface_single.sh 4GFT 84 
+./run_interface_single.sh 3RNQ 33 
+./run_relax.sh 2r2z 
+./run_interface_single.sh 1MCT 47 
+./run_relax.sh 2g6f 
+./run_interface_single.sh 2FOM 79 
+./run_interface_single.sh 2VLQ 65 
+./run_interface_single.sh 2A5D 10 
+./run_relax.sh 1aho 
+./run_interface_single.sh 4N9O 59 
+./run_relax.sh 1vbw 
+./run_interface_single.sh 2YLE 75 
+./run_interface_single.sh 2X83 35 
+./run_interface_single.sh 4M6B 64 
+./run_interface_single.sh 4G7X 86 
+./run_relax.sh 1f94 
+./run_interface_single.sh 3KNB 85 
+./run_relax.sh 1oai 
+./run_relax.sh 1nkd 
+./run_interface_single.sh 2QME 77 
+./run_interface_single.sh 2NPT 87 
+./run_interface_single.sh 1DJ7 81 
+./run_interface_single.sh 2OZN 55 
+./run_relax.sh 2fma 
+./run_interface_single.sh 3K2M 78 
+./run_interface_single.sh 4DRI 68 
+./run_relax.sh 1i2t 
+./run_relax.sh 1kth 
+./run_relax.sh 1ucs 
+./run_relax.sh 1zuu 
+./run_relax.sh 2gkr 
+./run_relax.sh 1bq8 
+./run_relax.sh 1zlm 
+./run_expsol_single.sh 1raj_0001 
+./run_expsol_single.sh 4pkx_0001 
+./run_expsol_single.sh 1txl_0001 
+./run_expsol_single.sh 4l3n_0001 
+./run_expsol_single.sh 3cbn_0001 
+./run_expsol_single.sh 4pwt_0001 
+./run_expsol_single.sh 3cw3_0001 
+./run_expsol_single.sh 3rcq_0001 
+./run_expsol_single.sh 4m9k_0001 
+./run_expsol_single.sh 4g3n_0001 
+./run_expsol_single.sh 1alq_0001 
+./run_expsol_single.sh 1wvv_0001 
+./run_expsol_single.sh 3rl5_0001 
+./run_expsol_single.sh 4cil_0001 
+./run_expsol_single.sh 3m7g_0001 
+./run_expsol_single.sh 4fc5_0001 
+./run_expsol_single.sh 2r51_0001 
+./run_expsol_single.sh 3no0_0001 
+./run_expsol_single.sh 4q0y_0001 
+./run_expsol_single.sh 1m40_0001 
+./run_expsol_single.sh 1w2f_0001 
+./run_expsol_single.sh 1g7v_0001 
+./run_expsol_single.sh 1u0j_0001 
+./run_expsol_single.sh 1eg2_0001 
+./run_expsol_single.sh 1ml9_0001 
+./run_expsol_single.sh 2apj_0001 
+./run_expsol_single.sh 1h0b_0001 
+./run_expsol_single.sh 1htj_0001 
+./run_expsol_single.sh 1s2b_0001 
+./run_expsol_single.sh 4xxt_0001 
+./run_expsol_single.sh 1g3q_0001 
+./run_expsol_single.sh 2o8l_0001 
+./run_expsol_single.sh 2q4k_0001 
+./run_expsol_single.sh 1vok_0001 
+./run_expsol_single.sh 2c3z_0001 
+./run_expsol_single.sh 1r44_0001 
+./run_expsol_single.sh 3t0h_0001 
+./run_expsol_single.sh 1azo_0001 
+./run_expsol_single.sh 4ixl_0001 
+./run_expsol_single.sh 2abw_0001 
+./run_expsol_single.sh 2yzq_0001 
+./run_expsol_single.sh 4a3p_0001 
+./run_expsol_single.sh 4jwh_0001 
+./run_expsol_single.sh 3tss_0001 
+./run_expsol_single.sh 1eyq_0001 
+./run_expsol_single.sh 4ddp_0001 
+./run_expsol_single.sh 3l9u_0001 
+./run_expsol_single.sh 3ec2_0001 
+./run_expsol_single.sh 2cwa_0001 
+./run_expsol_single.sh 2gee_0001 
+./run_expsol_single.sh 1b87_0001 
+./run_expsol_single.sh 1u31_0001 
+./run_expsol_single.sh 2x7m_0001 
+./run_expsol_single.sh 1oqv_0001 
+./run_expsol_single.sh 2hra_0001 
+./run_expsol_single.sh 3u50_0001 
+./run_expsol_single.sh 3lqy_0001 
+./run_expsol_single.sh 1oxj_0001 
+./run_expsol_single.sh 2c4b_0001 
+./run_expsol_single.sh 1p3q_0001 
+./run_expsol_single.sh 1m8n_0001 
+./run_expsol_single.sh 3dcz_0001 
+./run_expsol_single.sh 3wh2_0001 
+./run_expsol_single.sh 2iaf_0001 
+./run_expsol_single.sh 2d4r_0001 
+./run_expsol_single.sh 3axc_0001 
+./run_expsol_single.sh 3b72_0001 
+./run_expsol_single.sh 1x9u_0001 
+./run_expsol_single.sh 4qp5_0001 
+./run_expsol_single.sh 2vb1_0001 
+./run_expsol_single.sh 1wka_0001 
+./run_expsol_single.sh 3n6y_0001 
+./run_expsol_single.sh 2a7b_0001 
+./run_expsol_single.sh 4bgj_0001 
+./run_expsol_single.sh 3emx_0001 
+./run_expsol_single.sh 2gk2_0001 
+./run_expsol_single.sh 4dcz_0001 
+./run_expsol_single.sh 1sbx_0001 
+./run_expsol_single.sh 2p9r_0001 
+./run_expsol_single.sh 3rhb_0001 
+./run_expsol_single.sh 3dml_0001 
+./run_expsol_single.sh 2y4x_0001 
+./run_expsol_single.sh 4b6d_0001 

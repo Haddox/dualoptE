@@ -1,0 +1,28 @@
+<ROSETTASCRIPTS>
+	<SCOREFXNS>
+		<ScoreFunction name="myscore" weights="%%wts%%"/>
+	</SCOREFXNS>
+
+	<TASKOPERATIONS>
+		RestrictToInterface name=interface jump=1 distance=8.0/>
+		<RestrictToInterfaceVector name="interface" chain1_num="1" chain2_num="2" CB_dist_cutoff="10.0" nearby_atom_cutoff="5.5" vector_angle_cutoff="75.0" vector_dist_cutoff="9.0"/>
+		<IncludeCurrent name="ic"/>
+		ExtraRotamersGeneric name=extra ex1=1 ex2=1 extrachi_cutoff=0/>
+		<RestrictToRepacking name="restrict"/>
+	</TASKOPERATIONS>
+
+	<FILTERS>
+	</FILTERS>
+
+	<MOVERS>
+		PackRotamersMover name=pack scorefxn=myscore task_operations=restrict,interface,ic />
+		TaskAwareMinMover name=min scorefxn=myscore chi=1 bb=0 jump=1 task_operations=interface tolerance=0.001 max_iter=10/>
+		<ddG name="ddG" scorefxn="myscore" chain_num="2" repack_bound="1"/>
+	</MOVERS>
+
+	<PROTOCOLS>
+		Add mover_name = pack/>
+		Add mover_name = min/>
+		<Add mover_name="ddG"/>
+	</PROTOCOLS>
+</ROSETTASCRIPTS>
