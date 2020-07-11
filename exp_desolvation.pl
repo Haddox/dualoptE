@@ -69,14 +69,6 @@ my %SAs = (
 	'R' => 198
 );
 
-my $C_ref = 0.025;
-my $eps_min = 0.0;
-my $eps_max = 10.0;
-
-my $scaleNonlin = 10.0;
-my $scaleC = 0.0;
-my $scaleEps = 0.2;
-
 my (%dgros,%ljros);
 my (%solcounts,%vdwcounts,%burcounts);
 
@@ -104,6 +96,7 @@ foreach my $line ( @fasols ) {
 
 my ($xysum,$xxsum,$yysum,$xsum,$ysum) = (0,0,0);
 
+# least fit line
 foreach my $aa (keys %dgrefs) {
 	my $nelts = scalar(@{$burcounts{$aa}});
 	my @idxes =  sort { $burcounts{$aa}->[$b] <=> $burcounts{$aa}->[$a] } 0..$nelts-1;
@@ -113,7 +106,7 @@ foreach my $aa (keys %dgrefs) {
 
 	my $N = 5; ## $nelts/5;
 	if (scalar( @sortedEsol ) < $N) { $N = scalar( @sortedEsol ); }
-
+	
 	my ($sumLK,$sumLJ) = (0,0);
 	foreach my $i (0..$N-1) {
 		$sumLK += -$sortedEsol[$i]; # - $sortedLJ[$i];
@@ -141,49 +134,30 @@ $xysum /= scalar(keys %dgrefs);
 $xxsum /= scalar(keys %dgrefs);
 $yysum /= scalar(keys %dgrefs);
 
-#no intercept --- x & y reversed
-#my $M = $xysum/$yysum;
-
-# slope intercept --- x & y reversed
-
-# get squared error --- fit line
 my $M = ($xysum - $xsum*$ysum) / ($yysum - $ysum*$ysum);
 my $B = $xsum - $M*$ysum;
 
-# get squared error --- fixed line
-#my $M = $eps_ref;
-#my $B = - $C_ref * (1-1/$eps_ref);
-
-my $error1 = 0;
+my ($linLoss,$absLoss,$denom) = (0,0,0);
 foreach my $aa (keys %dgrefs) {
 	# dgref/SA = (eps)*dgros/SA - C*(1-1/eps)
 	my $dgrefsa = $dgrefs{$aa}/$SAs{$aa};
-	my $dgrefsa_fit = $M*$dgros{$aa}/$SAs{$aa} + $B;
-	my $error_aa = ( $dgrefsa  - $dgrefsa_fit );
-	$error1 += sqrt( $error_aa*$error_aa );
+	my $dgrefsa_fit = $dgros{$aa}/$SAs{$aa};
+	my $linErr = ( $dgrefsa  - ($M * $dgrefsa_fit + $B));
+	my $absErr = ( $dgrefsa  - $dgrefsa_fit );
+	$linLoss += $linErr * $linErr;
+	$absLoss += $absErr * $absErr;
+	$denom += $dgrefsa * $dgrefsa;
 }
-#$error = sqrt( $error/scalar(keys %dgrefs) );
-$error1 = $scaleNonlin* $error1/scalar(keys %dgrefs);
+$linLoss /= $denom;
+$absLoss /= $denom;
 
 # back calculate epsilon and c
 my $epsilon = $M;
 my $C = -$B / (1-1/$M);
 
-# calculate penalty
-my $error2=0.0;
-if ($epsilon<$eps_min) {
-	$error2 = $scaleEps*sqrt(($epsilon-$eps_min)*($epsilon-$eps_min));
-} elsif ($epsilon>$eps_max) {
-	$error2 = $scaleEps*sqrt(($epsilon-$eps_max)*($epsilon-$eps_max));
-}
-my $error3 = $scaleC*sqrt(($C-$C_ref)*($C-$C_ref));
-
-my $error = $error1+$error2+$error3;
-
-print $error." ".($xysum/sqrt( $xxsum*$yysum ))." ".scalar(@fasols)."\n";
+print $linLoss." ".$absLoss." ".scalar(@fasols)."\n";
 print "eps/c = ".$epsilon." ".$C."\n";
-print "error = ".$error1." ".$error2." ".$error3."\n";
-print "$M/$B = ".$M." ".$B."\n";
+print "M/B = ".$M." ".$B."\n";
 foreach my $aa (keys %dgrefs) {
 	print $aa." ".$dgros{ $aa }/$SAs{$aa}." ".$dgrefs{$aa}/$SAs{$aa}." "." ".scalar(@{$burcounts{$aa}})."\n";
 }

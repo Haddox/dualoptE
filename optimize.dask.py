@@ -16,10 +16,10 @@ import subprocess
 from scipy.stats import entropy
 from copy import deepcopy
 
-jobname="HH_run18D"
+jobname="dualoptE"
 
 def run_job(cmd):
-    ret = subprocess.call(cmd, shell=True,timeout=2400)
+    ret = subprocess.call(cmd, shell=True,timeout=3600)
     ret = int(ret)
     if ret != 0:
         raise RuntimeError("command failed", cmd)
@@ -51,24 +51,24 @@ class ParamsOpt:
         self.RANDOMIZE = 0.0
 
         ## score weights
-        self.wt_rr_int = 0.1;
-        self.wt_rr_core = 0.1;
+        self.wt_rr_int = 2.0;
+        self.wt_rr_core = 2.0;
         self.wt_decoy = 1.0;
         self.wt_min_decoy = 1.0;
-        self.wt_docking = 1.0;
+        self.wt_docking = 2.0;
         self.wt_grad = 1.0;
         self.wt_seqrecov = 1.0;
         self.wt_stab = 0.0000001;
-        self.wt_distr = 10.0;
-        self.wt_expsol = 1.0;
+        self.wt_distr = 1.0;
+        self.wt_expsol = 0.0;
+        self.wt_expsol_abs = 2.0;
 
         ## tether weights
         self.wt_hbdel = 0.02;
-        self.wt_lkoffdel = 0.01;
+        self.wt_lkdel = 0.01;
 
-        ## special mins << FD UNUSED FOR NOW
-        self.DISTR_MIN = 0.00;
-        self.EXPSOL_MIN = 0.00;
+        ## special mins
+        self.DISTR_MIN = 0.002;
 
         self.joblist = []
 
@@ -80,6 +80,7 @@ class ParamsOpt:
         self.cluster_obj = SLURMCluster(cores=1, processes=1, memory="4GB",
                 queue='long', name=jobname, extra=["--no-nanny", "--no-bokeh"],
                 walltime="160:00:00")
+        #self.cluster_obj.adapt(minimum=0, maximum=200, wait_count=400)
         self.cluster_obj.scale(200)
         self.client = Client(self.cluster_obj, timeout=600)
         print(self.client.scheduler_info())
@@ -170,7 +171,7 @@ class ParamsOpt:
 
             if readmode == 1:
                 fields = line.split(':')
-                params_init.append( ["LKDGFREE:"+fields[-3], float(fields[-1]), 6.0] )
+                params_init.append( ["DGFREE:"+fields[-3], float(fields[-1]), 6.0] )
             elif readmode == 11:
                 fields = line.split(':')
                 params_init.append( ["LKLAMBDA:"+fields[-3], float(fields[-1]), 1.0] )
@@ -215,7 +216,7 @@ class ParamsOpt:
             elif readmode == 6:
                 fields = re.split(" +",line)
                 for i in range(1,len(fields),2):
-                    params_init.append( ["weights:"+fields[i], float(fields[i+1]), 0.1] )
+                    params_init.append( ["weights:"+fields[i], float(fields[i+1]), 0.2] )
             elif readmode == 7:
                 fields = re.split(" +",line)
                 params_init.append( [fields[1], float(fields[2]), 0.5*float(fields[2])] )
@@ -418,7 +419,7 @@ class ParamsOpt:
                             flags_content+="""-chemical:set_atomic_charge fa_standard:%s:%.5f\n""" % (atom, newcharge)
                         else:
                             flags_content+="""-chemical:set_patch_atomic_charge fa_standard:%s:%.5f\n""" % (atom, newcharge)
-            elif (fields[0] == "LKDGFREE"):
+            elif (fields[0] == "DGFREE"):
                 flags_content+="""-chemical:set_atom_properties fa_standard:%s:LK_DGFREE:%.5f\n""" % (fields[1], param)
             elif (fields[0] == "LKLAMBDA"):
                 flags_content+="""-chemical:set_atom_properties fa_standard:%s:LK_LAMBDA:%.5f\n""" % (fields[1], param)
@@ -485,8 +486,6 @@ class ParamsOpt:
         #print(self.client.gather(results))
         wait(results)
 
-        #cleanup_cmd = "./run_cleanup.sh ./opt_%d &> /dev/null"%self.STRUCTCOUNTER
-        #os.system(cleanup_cmd)
         time.sleep(60)
         cleanup_cmd = "./run_cleanup.sh ./opt_%d"%self.STRUCTCOUNTER
         p = subprocess.Popen(
@@ -494,9 +493,7 @@ class ParamsOpt:
             stderr=subprocess.PIPE
         )
         out, err = p.communicate()
-        #print("out:", out)
-        #print("err:", err)
-        time.sleep(30)
+        time.sleep(10)
 
     def validate_results(self,ct_rr_int,ct_rr_core,ct_decoy,ct_min_decoy,ct_docking,ct_grad,ct_seqrecov,ct_distr,ct_expsol):
         if (ct_rr_int < 3380): 
@@ -513,7 +510,7 @@ class ParamsOpt:
             return False
         if (ct_grad < 47): 
             return False
-        if (ct_distr < 90):
+        if (ct_distr < 90): 
             return False
         if (ct_expsol < 2000): 
             return False
@@ -526,7 +523,7 @@ class ParamsOpt:
         ct_rr_int,ct_rr_core,ct_decoy,ct_min_decoy,ct_docking,ct_grad,ct_seqrecov,ct_distr,ct_expsol = 0,0,0,0,0,0,0,0,0
 
         # hbond offsets
-        hbdon, hbdon2, hbacc, hbacc2 = 0.0,0.0,0.0,0.0
+        hbdon, hbdon2, hbacc, hbacc2 = 0,0,0,0
         Ndon, Nacc = 0,0
         for i,name in enumerate(self.names):
             fields = re.split(':', name)
@@ -547,17 +544,21 @@ class ParamsOpt:
                 + np.sqrt( Nacc*hbacc2 - hbacc*hbacc ) / Nacc )
 
         # lk offsets
-        lkro, Nro = 0.0, 0
+        ch1dg,ch2dg,ch3dg=0,0,0
         for i,name in enumerate(self.names):
-            fields = re.split(':', name)
-            param = self.values_full[i]
-            if (fields[0] == "LKRADIUSOFFSET"):
-                lkro += param*param
-                Nro += 1
-        if Nro == 0:
-            sc_lkoffdel = 0
-        else:
-            sc_lkoffdel = np.sqrt( lkro / Nro )
+            if (name == "DGFREE:CH1"):
+                ch1dg = self.values_full[i]
+            if (name == "DGFREE:CH2"):
+                ch2dg = self.values_full[i]
+            if (name == "DGFREE:CH3"):
+                ch3dg = self.values_full[i]
+        sc_lkdel1 = ch3dg-ch2dg-2
+        if (sc_lkdel1 < 0):
+            sc_lkdel1 = 0
+        sc_lkdel2 = ch2dg-ch1dg-2
+        if (sc_lkdel2 < 0):
+            sc_lkdel2 = 0
+        sc_lkdel = sc_lkdel1 + sc_lkdel2
 
         sc_rr_int,ct_rr_int = parse_result(
             "opt_%d/rr_interface_result"%self.STRUCTCOUNTER, -1, 0, 2)
@@ -581,14 +582,12 @@ class ParamsOpt:
             "opt_%d/distr_result"%self.STRUCTCOUNTER, 1, 0, 1)
         sc_expsol,ct_expsol = parse_result(
             "opt_%d/expsol_result"%self.STRUCTCOUNTER, 1, 0, 2)
+        sc_expsol_abs,_ = parse_result(
+            "opt_%d/expsol_result"%self.STRUCTCOUNTER, 1, 1, 2)
 
         ### SPECIAL CASE FOR DISTR!
         if (sc_distr < self.DISTR_MIN):
             sc_distr = self.DISTR_MIN
-
-        ### SPECIAL CASE FOR expsol!
-        if (sc_expsol < self.EXPSOL_MIN):
-            sc_expsol = self.EXPSOL_MIN
 
         elapsed_time = time.time() - self.sttime
 
@@ -609,15 +608,16 @@ class ParamsOpt:
                 self.wt_stab * sc_seqstab +
                 self.wt_distr * sc_distr +
                 self.wt_expsol * sc_expsol +
+                self.wt_expsol_abs * sc_expsol_abs +
                 self.wt_hbdel * sc_hbdel +
-                self.wt_lkoffdel * sc_lkoffdel
+                self.wt_lkdel * sc_lkdel
             )
             if self.STRUCTCOUNTER==1:
-                print( "                   %8s %8s %8s %8s %8s %8s %8s %8s %8s %8s %8s %8s %8s"%(
-                    "TOTAL", "RR_INT", "RR_CORE", "DECOY", "MINDECOY", "DOCK", "XTALGRAD", "SEQREC", "STAB", "DISTR", "EXPSOL","HBDEL","LKDEL") )
-            print( "[ %4d : %6d s] %8.4f %8.4f %8.4f %8.4f %8.4f %8.4f %8.4f %8.4f %8.4f %8.4f %8.4f %8.4f %8.4f"%(
+                print( "                   %8s %8s %8s %8s %8s %8s %8s %8s %8s %8s %8s %8s %8s %8s"%(
+                    "TOTAL", "RR_INT", "RR_CORE", "DECOY", "MINDECOY", "DOCK", "XTALGRAD", "SEQREC", "STAB", "DISTR", "EXPSOL","EXSABS","HBDEL","LKDEL") )
+            print( "[ %4d : %6d s] %8.4f %8.4f %8.4f %8.4f %8.4f %8.4f %8.4f %8.4f %8.4f %8.4f %8.4f %8.4f %8.4f %8.4f"%(
                     self.STRUCTCOUNTER, elapsed_time,
-                    score_tot,sc_rr_int,sc_rr_core,sc_decoy,sc_min_decoy,sc_docking,sc_grad,sc_seqrecov,sc_seqstab,sc_distr,sc_expsol,sc_hbdel,sc_lkoffdel ))
+                    score_tot,sc_rr_int,sc_rr_core,sc_decoy,sc_min_decoy,sc_docking,sc_grad,sc_seqrecov,sc_seqstab,sc_distr,sc_expsol,sc_expsol_abs,sc_hbdel,sc_lkdel ))
 
             self.STRUCTCOUNTER += 1
             if self.EVALONLY != 0:
