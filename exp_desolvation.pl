@@ -10,8 +10,8 @@ use Getopt::Long;
 use constant TINY => 1e-16;
 
 
-my $median = 0;
-GetOptions ("median" => \$median);
+my ($median) = 0;
+GetOptions ("median=i" => \$median);
 
 # constants
 my ($ALPHA,$BETA,$GAMMA)=(1.0,0.5,2.0);
@@ -110,9 +110,20 @@ foreach my $aa (keys %dgrefs) {
 	my @sortedLJ = @{$vdwcounts{$aa}}[ @idxes ];
 
 	my ($sumLK,$sumLJ) = (0,0);
-	if (!$median) {
+	if ($median) {
+		my $start = int(($nelts-$median)/2);
+		my $stop = $start+$median-1;
+		if ($start < 0) { $start = 0; }
+		if ($stop > $nelts-1) { $stop = $nelts-1; }
+		foreach my $i ($start..$stop) {
+			$sumLK += -$sortedEsol[$i];
+			$sumLJ += $sortedLJ[$i];
+		}
+		$sumLK /= ($stop-$start+1);
+		$sumLJ /= ($stop-$start+1);
+	} else {
 		my $N = 5; ## $nelts/5;
-		if (scalar( @sortedEsol ) < $N) { $N = scalar( @sortedEsol ); }
+		if ($nelts < $N) { $N = $nelts; }
 	
 		foreach my $i (0..$N-1) {
 			$sumLK += -$sortedEsol[$i]; # - $sortedLJ[$i];
@@ -120,9 +131,6 @@ foreach my $aa (keys %dgrefs) {
 		}
 		$sumLK /= $N;
 		$sumLJ /= $N;
-	} else {
-		$sumLK = -$sortedEsol[ int($nelts/2) ];
-		$sumLJ = $sortedLJ[ int($nelts/2) ];
 	}
 	
 	$ljros{ $aa } = $sumLJ;
