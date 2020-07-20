@@ -6,7 +6,12 @@
 use strict;
 use POSIX;
 use Carp;
+use Getopt::Long;
 use constant TINY => 1e-16;
+
+
+my $median = 0;
+GetOptions ("median" => \$median);
 
 # constants
 my ($ALPHA,$BETA,$GAMMA)=(1.0,0.5,2.0);
@@ -104,17 +109,22 @@ foreach my $aa (keys %dgrefs) {
 	my @sortedEsol = @{$solcounts{$aa}}[ @idxes ];
 	my @sortedLJ = @{$vdwcounts{$aa}}[ @idxes ];
 
-	my $N = 5; ## $nelts/5;
-	if (scalar( @sortedEsol ) < $N) { $N = scalar( @sortedEsol ); }
-	
 	my ($sumLK,$sumLJ) = (0,0);
-	foreach my $i (0..$N-1) {
-		$sumLK += -$sortedEsol[$i]; # - $sortedLJ[$i];
-		$sumLJ += $sortedLJ[$i];
+	if (!$median) {
+		my $N = 5; ## $nelts/5;
+		if (scalar( @sortedEsol ) < $N) { $N = scalar( @sortedEsol ); }
+	
+		foreach my $i (0..$N-1) {
+			$sumLK += -$sortedEsol[$i]; # - $sortedLJ[$i];
+			$sumLJ += $sortedLJ[$i];
+		}
+		$sumLK /= $N;
+		$sumLJ /= $N;
+	} else {
+		$sumLK = -$sortedEsol[ int($nelts/2) ];
+		$sumLJ = $sortedLJ[ int($nelts/2) ];
 	}
-	$sumLK /= $N;
-	$sumLJ /= $N;
-
+	
 	$ljros{ $aa } = $sumLJ;
 	$dgros{ $aa } = $sumLK;
 
