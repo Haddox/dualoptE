@@ -43,7 +43,7 @@ rm $1/*COUNTS $1/*ENERGIES $1/*stab $1/*ddg ssm_results stability_results ddg_re
 
 # expsol
 cat $1/*.EXPSOL > $1/ALL.EXPSOL
-./exp_desolvation.pl $1/ALL.EXPSOL > $1/expsol_result
+./exp_desolvation.pl $1/ALL.EXPSOL --median 5 > $1/expsol_result
 rm $1/*EXPSOL
 
 # distrs
