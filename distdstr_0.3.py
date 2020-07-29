@@ -261,7 +261,7 @@ def main(files, reffile, radius, genref, plot, verbose, chainids):
             KLsum += weight * kldiv * kldiv
 
             if (plot):
-                name = a1+':'+a2+'('+str(refcounts[a1,a2])+')\n'+str(kldiv)
+                name = min(a1,a2)+':'+max(a1,a2)+'('+str(refcounts[a1,a2])+')\n'+str(kldiv)
                 toplot[name] = (refhist[a1,a2], hist[tag])
 
         if (plot):
