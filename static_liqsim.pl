@@ -12,7 +12,6 @@ if ($#ARGV < 0) {
 }
 
 my $FRACN = shift @ARGV;
-my $silentfile = shift @ARGV;
 
 my $TTEMP = 30.0;  #from hahnbeom
 my $TVOL = 15.0;   #from hahnbeom
@@ -205,7 +204,7 @@ my (%allDs, %allVs, %allEs);
 my (%Eref, %Vref);
 
 foreach my $scfile (@ARGV) {
-	open (SIL, $scfile) || die "Unable to open ".$silentfile.".";
+	open (SIL, $scfile) || die "Unable to open ".$scfile.".";
 
 	my @scsplit = split(/\./, $scfile);
 	my $tag = $scsplit[0];
@@ -218,7 +217,7 @@ foreach my $scfile (@ARGV) {
 		$Vref{$tag} = 1e6;
 	}
 
-	my ($scorecol,$volcol,$denscol,$corrcol,$intracol) = (-1,-1,-1,-1,-1);
+	my ($scorecol,$volcol,$denscol,$corrcol,$intraAcol,$intraRcol) = (-1,-1,-1,-1,-1);
 
 	while (my $line=<SIL>) {
 		chomp $line;
@@ -228,7 +227,8 @@ foreach my $scfile (@ARGV) {
 		if ($line =~ /description/) {
 			foreach my $i (0..$#fields) {
 				if ($fields[$i] eq "score") { $scorecol=$i; }
-				if ($fields[$i] eq "fa_intra_rep") { $intracol=$i; }
+				if ($fields[$i] eq "fa_intra_atr_xover4") { $intraAcol=$i; }
+				if ($fields[$i] eq "fa_intra_rep_xover4") { $intraRcol=$i; }
 				if ($fields[$i] eq "LJcorr") { $corrcol=$i; }
 				if ($fields[$i] eq "volume") { $volcol=$i; }
 				if ($fields[$i] eq "density") { $denscol=$i; }
@@ -244,7 +244,7 @@ foreach my $scfile (@ARGV) {
 				die "unable to find dens column";
 			}
 
-			my $score_i = ($fields[$scorecol] + $fields[$corrcol] - $fields[$intracol])*0.5;
+			my $score_i = ($fields[$scorecol] + $fields[$corrcol] - $fields[$intraAcol] - $fields[$intraRcol])*0.5;
 			my $vol_i = $fields[$volcol];
 			my $dens_i = $fields[$denscol];
 
